@@ -11,8 +11,13 @@ public class Singleton {
     }
 
     public static  Singleton getInstance() {
-        return instance;
+      //  if (instance == null){
+      //      instance = new Singleton();
+       // }
+       // return instance;   
+       
+       return instance == null ? instance = new Singleton() : instance;
     }
-    
-    
 }
+    
+    
