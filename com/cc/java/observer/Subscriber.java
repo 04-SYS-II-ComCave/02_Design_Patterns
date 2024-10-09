@@ -16,11 +16,17 @@ public class Subscriber extends Observer{
     }
 
 
-    @Override
+    /*@Override
     public void update() {
-       String str = name + ": observers, that subject changed  its start" ;
+       String str = name + ": observers, that subject changed  its start" + s.getState();
        Helper.output(str);
-    }
+    }*/
 
+     /* Variante Push()*/
+     @Override
+     public void update(String msg) {
+         String str = name + " observes, that subject changed its state to: " + msg;
+         Helper.output(str);
+     }
     
 }
