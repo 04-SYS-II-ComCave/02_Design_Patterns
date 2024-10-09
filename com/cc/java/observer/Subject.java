@@ -3,6 +3,8 @@ package com.cc.java.observer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cc.java.tools.Helper;
+
 public class Subject implements Observable{
 
     private String state;
@@ -27,6 +29,7 @@ public class Subject implements Observable{
     @Override
     public void notifyObservers() {
           for (Observer o : observers) {
+            o.update();
              // to do
            }
      }
